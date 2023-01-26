@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ResponsivenessLayoutBuilder extends StatefulWidget {
-  const ResponsivenessLayoutBuilder({Key? key}) : super(key: key);
+/// We can use LayoutBuilder to capture the constraints of a specific point of our app,
+/// LayoutBuilder returns us the available size in the place where it is on widgets tree
+class ResponsiveLayoutBuilder extends StatefulWidget {
+  const ResponsiveLayoutBuilder({Key? key}) : super(key: key);
 
   @override
-  ResponsivenessLayoutBuilderState createState() => ResponsivenessLayoutBuilderState();
+  ResponsiveLayoutBuilderState createState() => ResponsiveLayoutBuilderState();
 }
 
-class ResponsivenessLayoutBuilderState extends State<ResponsivenessLayoutBuilder> {
+class ResponsiveLayoutBuilderState extends State<ResponsiveLayoutBuilder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +27,10 @@ class ResponsivenessLayoutBuilderState extends State<ResponsivenessLayoutBuilder
             var largura = constraint.maxWidth;
             print("width: $largura");
 
-            if( largura < 600 ){//celular
+            // Here we can create our breakpoints
+            if( largura < 600 ){//smartphone
               return Text("Smartphone");
-            }else if( largura < 960 ) { //celular maiores e tablets
+            }else if( largura < 960 ) { //smartphones and tablets
               return Text("Smartphone & Tablets");
             }else{
               return Text("Big screens");

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ResponsivenessMediaQuery extends StatefulWidget {
-  const ResponsivenessMediaQuery({Key? key}) : super(key: key);
+/// We can use MediaQuery to get device's screen size and it's paddings
+class ResponsiveMediaQuery extends StatefulWidget {
+  const ResponsiveMediaQuery({Key? key}) : super(key: key);
 
   @override
-  _ResponsivenessMediaQueryState createState() => _ResponsivenessMediaQueryState();
+  _ResponsiveMediaQueryState createState() => _ResponsiveMediaQueryState();
 }
 
-class _ResponsivenessMediaQueryState extends State<ResponsivenessMediaQuery> {
+class _ResponsiveMediaQueryState extends State<ResponsiveMediaQuery> {
   @override
   Widget build(BuildContext context) {
 

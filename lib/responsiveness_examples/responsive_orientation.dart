@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ResponsivenessOrientation extends StatefulWidget {
-  const ResponsivenessOrientation({Key? key}) : super(key: key);
+/// We can use OrientationBuilder to detect if the screen size is portrait or landscape
+class ResponsiveOrientation extends StatefulWidget {
+  const ResponsiveOrientation({Key? key}) : super(key: key);
 
   @override
-  _ResponsivenessOrientationState createState() => _ResponsivenessOrientationState();
+  _ResponsiveOrientationState createState() => _ResponsiveOrientationState();
 }
 
-class _ResponsivenessOrientationState extends State<ResponsivenessOrientation> {
+class _ResponsiveOrientationState extends State<ResponsiveOrientation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Orientação'),
       ),
-      body: OrientationBuilder( // Just detects if the available screen is Landscape or Portrit, works on web too
+      body: OrientationBuilder( // Just detects if the available screen is Landscape or Portrait, works on web too
         builder: (context, orientation){
           // return Container(
           //   child: orientation == Orientation.portrait

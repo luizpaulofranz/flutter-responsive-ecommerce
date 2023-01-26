@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ResponsivenessRowCol extends StatefulWidget {
-  const ResponsivenessRowCol({Key? key}) : super(key: key);
+/// We can use widgets like Expanded and its property flex to design responsive 
+/// widgets combining these widgets.
+class ResponsiveRowCol extends StatefulWidget {
+  const ResponsiveRowCol({Key? key}) : super(key: key);
 
   @override
-  _ResponsivenessRowColState createState() => _ResponsivenessRowColState();
+  _ResponsiveRowColState createState() => _ResponsiveRowColState();
 }
 
-class _ResponsivenessRowColState extends State<ResponsivenessRowCol> {
+class _ResponsiveRowColState extends State<ResponsiveRowCol> {
   @override
   Widget build(BuildContext context) {
 

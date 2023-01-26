@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ResponsivenessWrap extends StatefulWidget {
-  const ResponsivenessWrap({Key? key}) : super(key: key);
+/// Wrap widget diverge from Columns and Rows because we have 
+/// auto break line here, if the content does not fit inside the wrap
+/// it expands his size (break line) to comport the widgets
+class ResponsiveWrap extends StatefulWidget {
+  const ResponsiveWrap({Key? key}) : super(key: key);
 
   @override
-  _ResponsivenessWrapState createState() => _ResponsivenessWrapState();
+  _ResponsiveWrapState createState() => _ResponsiveWrapState();
 }
 
-class _ResponsivenessWrapState extends State<ResponsivenessWrap> {
+class _ResponsiveWrapState extends State<ResponsiveWrap> {
   @override
   Widget build(BuildContext context) {
     double height = 100;
@@ -20,7 +23,7 @@ class _ResponsivenessWrapState extends State<ResponsivenessWrap> {
       body: Container(
         color: Colors.black26,
         width: MediaQuery.of(context).size.width,
-        child: Wrap( // Break line atumatically if does not fit on the screen
+        child: Wrap( // Break line automatically if does not fit on the screen
           alignment: WrapAlignment.center,
           runSpacing: 10, // rows spacing
           spacing: 10, // column spacing
