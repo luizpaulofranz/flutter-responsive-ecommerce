@@ -1,4 +1,5 @@
 import 'package:ecommerce/ecommerce.dart';
+import 'package:ecommerce/responsiveness_examples/responsive_texts.dart';
 import 'package:ecommerce/responsiveness_examples/responsive_wrap.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Web',
       debugShowCheckedModeBanner: false,
       home: Ecommerce(),
+      // home: ResponsiveTexts(),
     );
   }
 }
