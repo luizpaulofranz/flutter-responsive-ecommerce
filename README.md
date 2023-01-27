@@ -14,4 +14,4 @@ Tablet
 
 Mobile
 
-![image](https://user-images.githubusercontent.com/5604719/214850026-83c731a4-42a7-4205-8d51-a6a78ffb213e.png)
+![image](https://user-images.githubusercontent.com/5604719/215108841-e980073c-21c9-4ec8-9f1e-15b56bd618db.png)
