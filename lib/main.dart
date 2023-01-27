@@ -1,10 +1,17 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:ecommerce/ecommerce.dart';
-import 'package:ecommerce/responsiveness_examples/responsive_texts.dart';
-import 'package:ecommerce/responsiveness_examples/responsive_wrap.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    /// This widget emulates several devices at one place
+    /// Good only for dev mode
+    DevicePreview(
+      builder: (context) {
+        return const MyApp();
+      },
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      //DevicePreview needs these two extra confs here
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
+
       title: 'Flutter Web',
       debugShowCheckedModeBanner: false,
       home: Ecommerce(),
